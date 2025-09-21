@@ -4,7 +4,7 @@ import storage from 'redux-persist/lib/storage'
 import { combineReducers } from '@reduxjs/toolkit'
 
 import authSlice from './slices/authSlice'
-import documentSlice from './slices/documentSlice'
+import documentSlice from './slices/extraDocumentSlice'
 import uiSlice from './slices/uiSlice'
 import lawyerSlice from "./slices/lawyerSlice"
 import activitySlice from "./slices/activitySlice"

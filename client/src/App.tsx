@@ -10,8 +10,8 @@ import { Sidebar } from './components/layout/Sidebar'
 
 // Pages
 import { Landing } from './pages/Landing'
-import { Upload } from './pages/Upload'
-import { Results } from './pages/Results'
+import { Upload } from './pages/TestUpload'
+import { Results } from './pages/TestResult'
 import { Login } from './pages/Login'
 import { Signup } from './pages/Signup'
 import { Profile } from './pages/Profile'

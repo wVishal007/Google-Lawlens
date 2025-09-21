@@ -22,6 +22,7 @@ import { CaseBoard } from './pages/CaseBoard'
 // Hooks
 import { useAppSelector } from './hooks/useAppSelector'
 import { ActivitiesBoard } from './pages/ActivityBoard'
+import { LawyerClients } from './pages/LawyerClient'
 
 // Protected Route Component
 const ProtectedRoute: React.FC<{ children: React.ReactNode }> = ({ children }) => {
@@ -103,6 +104,13 @@ const AppRoutes: React.FC = () => {
           <ProtectedRoute>
             <AuthenticatedLayout>
               <ActivitiesBoard />
+            </AuthenticatedLayout>
+          </ProtectedRoute>
+        } />
+        <Route path="/lawyer/manage" element={
+          <ProtectedRoute>
+            <AuthenticatedLayout>
+              <LawyerClients />
             </AuthenticatedLayout>
           </ProtectedRoute>
         } />

@@ -9,7 +9,12 @@ export interface Lawyer {
   rating: number;
   location: string;
   hourlyRate: number;
+  bio?: string;
+  phone?: string;
+  profilePic?: string;
+  documentUrl?: string;
 }
+
 
 interface LawyerState {
   lawyers: Lawyer[];

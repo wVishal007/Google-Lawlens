@@ -89,3 +89,23 @@ export const login = async (req, res) => {
         });
     }
 };
+
+export const getAllUsers = async (req, res) => {
+  try {
+    const requestingUserId = req.id; // from isAuthenticated middleware
+    const requestingUser = await User.findById(requestingUserId);
+    // check if requester is a lawyer
+    if (!requestingUser?.islawyer) {
+      return res.status(403).json({ message: "Access denied. Only lawyers can view users." });
+    }
+
+    // fetch all non-lawyer users
+    const users = await User.find({ islawyer: false }).select("name email gender ProfilePicture createdAt");
+console.log(users);
+
+    res.status(200).json({ users });
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ message: "Error fetching users", error });
+  }
+};

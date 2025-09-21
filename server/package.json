@@ -13,8 +13,10 @@
   "dependencies": {
     "@google-cloud/storage": "^7.17.1",
     "bcryptjs": "^3.0.2",
+    "cloudinary": "^2.7.0",
     "cookie-parser": "^1.4.7",
     "cors": "^2.8.5",
+    "datauri": "^4.1.0",
     "dotenv": "^17.2.2",
     "express": "^5.1.0",
     "express-validator": "^7.2.1",
@@ -22,10 +24,12 @@
     "jsonwebtoken": "^9.0.2",
     "mammoth": "^1.11.0",
     "mongoose": "^8.18.1",
+    "multer": "^2.0.2",
     "multer-gridfs-storage": "^5.0.2",
     "node-cron": "^4.2.1",
     "nodemailer": "^7.0.6",
     "nodemon": "^3.1.10",
-    "pdf-parse": "^1.1.1"
+    "pdf-parse": "^1.1.1",
+    "sharp": "^0.34.4"
   }
 }

@@ -46,6 +46,7 @@ export const signupUser = createAsyncThunk(
   async ({ name, email, password, gender }: { name: string; email: string; password: string; gender?: string }, { rejectWithValue }) => {
     try {
       const { data } = await axios.post(`${API_URL}/user/register`, { name, email, password, gender })
+      localStorage.setItem("token", data.token) // Save JWT like login
       return data.user
     } catch (err: any) {
       return rejectWithValue(err.response?.data?.message || "Signup failed")
